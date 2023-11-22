@@ -7,6 +7,10 @@ h1,p,h2,h3,h4,ul,li,body{
     padding: 0;
 }
 
+img {
+    max-width: 100%;
+}
+
 ul {
     list-style: none;
 }
@@ -17,12 +21,11 @@ a{
 }
 
 .max {    
-    max-width: 1000px;    
+    max-width: 1160px;    
 }
 
 header {    
-    margin: 40px auto 0 auto;
-    background-color: aquamarine;
+    margin: 40px auto ;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,5 +38,33 @@ nav ul {
 
 main {    
     margin: 0 auto;
-    background-color: lightgrey;
+    display: grid;
+}
+
+.introducao {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.perfil {
+    height: 520px;
+    max-width: 360px;
+}
+
+.introducao .info {
+    /* padding: 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.introducao h1 {
+    font-size: 72px;
+    font-weight: bold;
+    line-height: 80px;
+    margin-bottom: 30px;
+}
+
+.introducao p {
+    font-size: 20px;
 }
