@@ -68,3 +68,25 @@ main {
 .introducao p {
     font-size: 20px;
 }
+
+.experiencia {
+    display: grid;
+    grid-template-columns: minmax(350px, 400px) auto;
+    padding: 40px 0;
+}
+.experiencia h1{    
+    /* max-width: 350px;  */
+    line-height: 144px; 
+    font-size: 144px;
+    text-transform: uppercase;    
+    word-break: break-all; 
+}
+
+.experiencia .info {
+}
+
+.experiencia .resumo {
+    font-size: 24px;
+    padding: 0 120px;
+    font-size: 20px;
+}
