@@ -83,10 +83,60 @@ main {
 }
 
 .experiencia .info {
+    display: grid;
+    gap: 60px;    
+    margin-left: 120px;
 }
 
 .experiencia .resumo {
     font-size: 24px;
-    padding: 0 120px;
+    max-width: 450px;
     font-size: 20px;
+}
+
+.cards {
+    display: grid;
+    gap: 20px;
+}
+
+.cards > li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    background-color: lightgrey;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 20px;
+    gap: 100px;
+}
+
+
+.data {
+    position: absolute;
+    text-align: right;
+    width: 80px;
+    right: calc(100% + 60px);
+    top: 27px;
+}
+
+.cards > li::after {
+    content: "";
+    background-color: blue;
+    padding: 20px 4px;
+    position: absolute;
+    top: 23px;
+    left: -9px;
+}
+ 
+.tags {    
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tags li{
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
