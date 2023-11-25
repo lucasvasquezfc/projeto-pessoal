@@ -147,7 +147,7 @@ nav ul {
 .formacao {
     display: grid;
     grid-template-columns: minmax(350px, 400px) auto;
-    padding: 40px 0;
+    padding: 120px 0;
 }
 
 .formacao h1{    
@@ -172,7 +172,6 @@ nav ul {
 .formacao .info > p {
     font-size: 24px;
     max-width: 450px;
-    font-size: 20px;
 }
 
 .formacao .academico {
@@ -185,18 +184,52 @@ nav ul {
     background-color: black;
     padding: 20px;
     border-radius: 5px;
-    height: 150px;
-    width: 200px;;
     display: grid;
     grid-template-rows: auto auto 1fr auto;
     gap: 20px;
     /* align-items: center; */
 } 
 
-.academico li :is(h5) {
+.academico h5 {
     text-transform: uppercase;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.academico :is(h4,h3) {
+    font-size: 18px;
+}
+
+.academico h3 {
+    color: #fff;
 }
 
 .academico li > h4 {
     grid-row: 4;
+}
+
+.academico-items > h3{
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+.academico-items .cursos > li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.academico-items li{
+    margin: 20px 0;
+    color: #fff;
+    font-weight: 600;
+}
+
+.academico-items span {
+    color: #a3a3a3;
+}
+
+.rodape {
+    background-color: #000;
+    color: #fff;
+    padding: 120px 0;
 }
