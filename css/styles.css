@@ -1,3 +1,18 @@
+* {
+    --c1: #f2f2f2;
+    --c2:#e0e0e0;
+    --c3: #ccc;
+    --c4: #b8b8b8;
+    --c6: #8f8f8f;
+    --c10: #3d3d3d;
+    --c12: #141414;
+    --white:#fff;
+    --black:#000;
+    --gradiente: linear-gradient(180deg, rgba(133,204,243,1) 0%, rgba(58,113,192,1) 100%);
+    --blue1:#5d90db;
+    --blue2:#85ccf3;
+}
+
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
 }
@@ -36,6 +51,17 @@ nav ul {
     gap: 10px;
 } 
 
+nav a{
+    font-weight: bold;
+    color: var(--c12);    
+}
+
+nav a:hover {
+    border-bottom: 2px solid var(--blue1);
+    background-color: red;
+    transition: 0.25s ;
+}
+
 .container {    
     margin: 0 auto;
 }
@@ -51,12 +77,40 @@ nav ul {
 }
 
 .introducao .info {
-    /* padding: 100px; */
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
+/* ## DETALHE */
+.introducao .info h1{
+    position: relative;
+}
+
+.introducao .info h1::after {
+    content: '';
+    height: 120px;
+    width: 20px;
+    background-color: var(--blue1);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+}
+.introducao .info h1::before {
+    content: '';
+    height: 120px;
+    width: 20px;
+    background-color: var(--blue2);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -20px;
+    left: 28px;
+    z-index: -1;
+}
+/* ----- */
 .introducao h1 {
     font-size: 72px;
     font-weight: bold;
@@ -71,12 +125,13 @@ nav ul {
 .experiencia {
     display: grid;
     grid-template-columns: minmax(350px, 400px) auto;
-    padding: 40px 0;
+    padding: 120px 0;
 }
 .experiencia h1{    
     /* max-width: 350px;  */
     line-height: 144px; 
     font-size: 144px;
+    color: var(--c3);
     text-transform: uppercase;    
     word-break: break-all; 
 }
@@ -102,8 +157,8 @@ nav ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
-    background-color: lightgrey;
-    border: solid 1px black;
+    background-color: var(--c1);
+    border: solid 1px var(--c);
     border-radius: 5px;
     padding: 20px;
     gap: 100px;
@@ -120,7 +175,7 @@ nav ul {
 
 .experiencia .cards > li::after {
     content: "";
-    background-color: blue;
+    background: var(--gradiente);
     padding: 20px 4px;
     position: absolute;
     top: 23px;
@@ -135,13 +190,13 @@ nav ul {
 }
 
 .experiencia .tags li{
-    background-color: white;
+    background-color: var(--white);
     padding: 5px 10px;
     border-radius: 5px;
 }
 
 .bg {
-    background-color: #1b1b1b;
+    background-color: var(--c12);
 }
 
 .formacao {
@@ -162,11 +217,11 @@ nav ul {
     display: grid;
     gap: 60px;    
     margin-left: 120px;    
-    color:#a3a3a3;
+    color:var(--c6);
 }
 
 .formacao strong {
-    color:#fff;
+    color:var(--white);
 }
 
 .formacao .info > p {
@@ -181,7 +236,7 @@ nav ul {
 }
 
 .formacao .academico > li {
-    background-color: black;
+    background-color: var(--black);
     padding: 20px;
     border-radius: 5px;
     display: grid;
@@ -201,7 +256,7 @@ nav ul {
 }
 
 .academico h3 {
-    color: #fff;
+    color: var(--white);
 }
 
 .academico li > h4 {
@@ -220,30 +275,30 @@ nav ul {
 
 .academico-items li{
     margin: 20px 0;
-    color: #fff;
+    color: var(--white);
     font-weight: 600;
 }
 
 .academico-items span {
-    color: #a3a3a3;
+    color: var(--c6);
 }
 
 .rodape {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--black);
+    color: var(--white);
     padding: 120px 0;
 }
 
 .rodape li {
     font-size: 36px;
-    color: #fff;
+    color: var(--white);
     line-height: 40px;
     margin: 40px 0;
 }
 
 .rodape p {
     font-size: 24px;
-    color: #a3a3a3;
+    color: var(--c6);
 }
 
 .rodape .item{
