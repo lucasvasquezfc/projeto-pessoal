@@ -233,3 +233,37 @@ nav ul {
     color: #fff;
     padding: 120px 0;
 }
+
+.rodape li {
+    font-size: 36px;
+    color: #fff;
+    line-height: 40px;
+    margin: 40px 0;
+}
+
+.rodape p {
+    font-size: 24px;
+    color: #a3a3a3;
+}
+
+.rodape .item{
+    display: grid;
+    gap: 100px;
+}
+
+.rodape .item > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center
+}
+
+.rodape .descricao {
+    grid-column: 1;
+    grid-row: 1;
+    width: 500px;
+}
+
+.rodape .direitos {
+    font-size: 18px;
+}
