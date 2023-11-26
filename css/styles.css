@@ -61,13 +61,18 @@ nav a{
     font-weight: bold;
     color: var(--c12);
     position: relative;
-    border-radius: 1px;    
+    border-radius: 1px;
+    
+    &:hover {
+        background: var(--gradiente);
+        color: var(--white);
+    }
 }
 
-nav a:hover{
+/* nav a:hover{
     background: var(--gradiente);
     color: var(--white);
-}
+} */
 
 
 .container {    
@@ -94,38 +99,38 @@ nav a:hover{
 
 /* ## DETALHE */
 .introducao .info h1{
-    position: relative;
-}
-
-.introducao .info h1::after {
-    content: '';
-    height: 120px;
-    width: 20px;
-    background-color: var(--blue1);
-    transform: rotate(45deg);
-    position: absolute;
-    top: -20px;
-    left: 0;
-    z-index: -1;
-}
-.introducao .info h1::before {
-    content: '';
-    height: 120px;
-    width: 20px;
-    background-color: var(--blue2);
-    transform: rotate(45deg);
-    position: absolute;
-    top: -20px;
-    left: 28px;
-    z-index: -1;
-}
-/* ----- */
-.introducao h1 {
     font-size: 72px;
     font-weight: bold;
     line-height: 80px;
     margin-bottom: 30px;
+    position: relative;
+    
+    &::after {
+        content: '';
+        height: 120px;
+        width: 20px;
+        background-color: var(--blue1);
+        transform: rotate(45deg);
+        position: absolute;
+        top: -20px;
+        left: 0;
+        z-index: -1;
+    }
+
+    &::before {
+        content: '';
+        height: 120px;
+        width: 20px;
+        background-color: var(--blue2);
+        transform: rotate(45deg);
+        position: absolute;
+        top: -20px;
+        left: 28px;
+        z-index: -1;
+    }
 }
+
+/* ----- */
 
 .introducao p {
     font-size: 20px;
@@ -161,61 +166,60 @@ nav a:hover{
 .experiencia .cards {
     display: grid;
     gap: 20px;
-}
 
-.experiencia .cards > li {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: relative;
-    background-color: var(--c1);
-    border: solid 1px var(--c3);
-    border-radius: 5px;
-    padding: 20px;
-    gap: 100px;
-}
+    & h2{
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
 
-.experiencia .cards h2 {
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 20px;
-    margin-bottom: 10px;
-}
+    & p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
 
-.experiencia .cards p {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-}
+    > li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        background-color: var(--c1);
+        border: solid 1px var(--c3);
+        border-radius: 5px;
+        padding: 20px;
+        gap: 100px;
+    }
 
+    .data {
+        position: absolute;
+        text-align: right;
+        width: 80px;
+        right: calc(100% + 60px);
+        top: 27px;
+    }
 
-.experiencia .data {
-    position: absolute;
-    text-align: right;
-    width: 80px;
-    right: calc(100% + 60px);
-    top: 27px;
-}
+    > li::after {
+        content: "";
+        background: var(--gradiente);
+        padding: 10px 2px;
+        position: absolute;
+        top: 28px;
+        left: -4px;
+    }
+    
+    .tags {    
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
 
-.experiencia .cards > li::after {
-    content: "";
-    background: var(--gradiente);
-    padding: 10px 2px;
-    position: absolute;
-    top: 28px;
-    left: -4px;
-}
- 
-.experiencia .tags {    
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.experiencia .tags li{
-    background-color: var(--white);
-    padding: 5px 10px;
-    border-radius: 5px;
+        & li{
+            background-color: var(--white);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    }
 }
 
 .bg {
@@ -226,13 +230,17 @@ nav a:hover{
     display: grid;
     grid-template-columns: minmax(350px, 400px) auto;
     padding: 120px 0;
-}
 
-.formacao h1{    
-    line-height: 144px; 
-    font-size: 144px;
-    text-transform: uppercase;    
-    word-break: break-all; 
+    & h1{    
+        line-height: 144px; 
+        font-size: 144px;
+        text-transform: uppercase;    
+        word-break: break-all; 
+    }
+
+    & strong {
+        color:var(--white);
+    }
 }
 
 .formacao .info {
@@ -240,120 +248,140 @@ nav a:hover{
     gap: 60px;    
     margin-left: 120px;    
     color:var(--c6);
+
+    > p {
+        font-size: 24px;
+        max-width: 450px;
+    }
 }
 
-.formacao strong {
-    color:var(--white);
-}
-
-.formacao .info > p {
-    font-size: 24px;
-    max-width: 450px;
-}
 
 .formacao .academico {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-}
 
-.formacao .academico > li {
-    background-color: var(--black);
-    padding: 20px;
-    border-radius: 5px;
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    gap: 20px;
-    position: relative;
-} 
+    > li {
+        background-color: var(--black);
+        padding: 20px;
+        border-radius: 5px;
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        gap: 20px;
+        position: relative;
 
-.formacao .academico > li::after {
-    content: "";
-    background: var(--gradiente);
-    padding: 10px 2px;
-    position: absolute;
-    top: 62px;
-    left: -4px;
-}
+        &::after {
+            content: "";
+            background: var(--gradiente);
+            padding: 10px 2px;
+            position: absolute;
+            top: 62px;
+            left: -4px;
+        }
 
-.academico h5 {
-    text-transform: uppercase;
-    font-weight: normal;
-    font-size: 14px;
-}
+        > h4 {
+            grid-row: 4;
+        }
+    } 
 
-.academico :is(h4,h3) {
-    font-size: 18px;
-}
+    & h5 {
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 14px;
+    }
 
-.academico h3 {
-    color: var(--white);
-}
+    &:is(h4,h3) {
+        font-size: 18px;
+    }
 
-.academico li > h4 {
-    grid-row: 4;
-}
-
-.academico-items > h3{
-    text-transform: uppercase;
-    padding: 20px 0;
+    & h3 {
+        color: var(--white);
+    }
 }
 
 .academico-items {    
     position: relative;
-}
 
-/* seria bom um svg */
-.academico-items img{
-    position: absolute;
-    top: 22px;
-    left: -60px;
-}
+    > h3{
+        text-transform: uppercase;
+        padding: 20px 0;
+    }
 
-.academico-items .cursos > li{
-    display: flex;
-    justify-content: space-between;
-}
+    & img{
+        /* seria bom um svg */
+        position: absolute;
+        top: 22px;
+        left: -60px;
+    }
 
+    .cursos > li{
+        display: flex;
+        justify-content: space-between;
+    }
 
-.academico-items li{
-    margin: 20px 0;
-    color: var(--white);
-    font-weight: 600;
-}
+    & li{
+        margin: 20px 0;
+        color: var(--white);
+        font-weight: 600;
+    }
 
-.academico-items span {
-    color: var(--c6);
+    & span {
+        color: var(--c6);
+    }
 }
 
 .rodape {
     background-color: var(--black);
     color: var(--white);
     padding: 120px 0;
-}
+    position: relative;
 
-.rodape li {
-    font-size: 36px;
-    color: var(--white);
-    line-height: 40px;
-    margin: 40px 0;
-}
+    & li {
+        font-size: 36px;
+        color: var(--white);
+        line-height: 40px;
+        margin: 40px 0;
+    }
 
-.rodape p {
-    font-size: 24px;
-    color: var(--c6);
+    & p {
+        font-size: 24px;
+        color: var(--c6);
+    }
 }
 
 .rodape .item{
     display: grid;
     gap: 100px;
-}
 
-.rodape .item > div{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 100px;
-    align-items: center
+    > div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+        align-items: center
+    }
+    /* ## DETALHE */
+    &::after {
+        content: '';
+        height: 120px;
+        width: 20px;
+        background-color: var(--blue1);
+        transform: rotate(45deg);
+        position: absolute;
+        top: -60px;
+        left: 80px;
+    }
+
+    &::before {
+        content: '';
+        height: 120px;
+        width: 20px;
+        background-color: var(--blue2);
+        transform: rotate(45deg);
+        position: absolute;
+        top: -60px;
+        left: 108px;
+    }    
+    /* ----- */
 }
 
 .rodape .descricao {
@@ -366,29 +394,3 @@ nav a:hover{
     font-size: 18px;
 }
 
-/* ## DETALHE */
-.rodape{
-    position: relative;
-}
-
-.rodape .item::after {
-    content: '';
-    height: 120px;
-    width: 20px;
-    background-color: var(--blue1);
-    transform: rotate(45deg);
-    position: absolute;
-    top: -60px;
-    left: 80px;
-}
-.rodape .item::before {
-    content: '';
-    height: 120px;
-    width: 20px;
-    background-color: var(--blue2);
-    transform: rotate(45deg);
-    position: absolute;
-    top: -60px;
-    left: 108px;
-}
-/* ----- */
