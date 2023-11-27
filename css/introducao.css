@@ -5,12 +5,12 @@
     display: grid;    
     grid-template-columns: 1fr 2fr;
     gap: 100px;
-    align-items: center;    
+    align-items: center;
+}
 
-    & p{
-        font-size: 1.5rem;
-        color: var(--c10);
-    }
+.introducao p{
+    font-size: 1.5rem;
+    color: var(--c10);
 }
 
 .introducao h1{
@@ -19,19 +19,19 @@
     line-height: 1.125;
     margin-bottom: 30px;
     position: relative;
-    
-    &::before {
-        content: '';
-        display: block;
-        width: 130px;
-        height: 100px;
-        background: url('../img/detalhe.svg') no-repeat center;
-        position: absolute;
-        top: -15px;
-        left: -40px;
-        z-index: -1;
-    }  
 }
+
+.introducao h1::before {
+    content: '';
+    display: block;
+    width: 130px;
+    height: 100px;
+    background: url('../img/detalhe.svg') no-repeat center;
+    position: absolute;
+    top: -15px;
+    left: -40px;
+    z-index: -1;
+}  
 
 @media (max-width: 1000px) {
     .introducao h1{
@@ -47,21 +47,21 @@
 
     .introducao h1{
         font-size: 2rem;
-
-        &::before {
-            width: 30px;
-            height: 10px;
-            left: 0;
-        }  
     }
+
+    .introducao h1::before {
+        width: 30px;
+        height: 10px;
+        left: 0;
+    }  
 }
 
 @media (max-width: 400px) {
     .introducao{
         grid-template-columns: 1fr;
 
-        & img {
-            display: none;
-        }
-    }           
+    }
+    .introducao img {
+        display: none;
+    }      
 }
